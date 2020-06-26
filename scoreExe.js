@@ -5,6 +5,7 @@ var disp1=document.getElementById("dis1");
 var disp2=document.getElementById("dis2");
 var inp=document.querySelector("input");
 var tarScore=document.getElementById("target");
+var winDec=document.querySelector("#winDec");
 var p1Score=0;
 var p2Score=0;
 var gameOver=false;
@@ -17,6 +18,7 @@ p1button.addEventListener("click",function(){
 		if(p1Score===winScore){
 			disp1.classList.add("winner");
 			gameOver=true;
+			winDec.innerHTML="YAYAYAY! PLAYER-1 WON";	
 		}
 		disp1.textContent=p1Score;
 	}
@@ -28,7 +30,8 @@ p2button.addEventListener("click",function(){
 		p2Score++;
 		if(p2Score===winScore){
 			disp2.classList.add("winner");
-			gameOver=true;			
+			gameOver=true;
+			winDec.innerHTML="YAYAYAY! PLAYER-2 WON";			
 		}
 		disp2.textContent=p2Score;
 	}
@@ -47,6 +50,7 @@ function reset1(){
 	disp1.classList.remove("winner");
 	disp2.classList.remove("winner");
 	gameOver=false;
+	winDec.innerHTML="";
 }
 
 inp.addEventListener("change",function(){
