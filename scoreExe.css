@@ -1,3 +1,14 @@
+body{
+	background-color:#01051C;
+	font-family: 'Work Sans', sans-serif;
+	font-size:25px;
+	color:#F4DB7D ;
+}
+button{
+	background-color:#FAE69C;
+	border:1px solid black;
+	border-radius:5px;
+}
 .winner{
 	color: green;
 }
